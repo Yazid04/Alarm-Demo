@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="mainContainer">
+        <section class="alarm-info">
+            <main class="settingAlarm">
+                <form class="form" action="/action_page.php">
+                    <label for="quantity">Set Alarm:</label>
+                    <div id="inputsContainer" data-hour-input="hourInput">
+                        <input id="inputs" class="hourInput" type="number" name="quantity" value="1">
+                    </div>
+                    <div id="inputsContainer" data-minute-input="minuteInput">
+                        <input id="inputs" class="minuteInput" type="number" name="quantity" value="00">
+                    </div>
+                    <a href="#">
+                        <h3 data-add="add">Add</h3>
+                    </a>
+                </form>
+            </main>
+            <h1 class="title">No Alarms currently</h1>
+            <div class="icons">
+                <i class="fa-solid fa-plus"></i>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+        </section>
+        <section class="alarms">
+            <div class="actualAlarm" style="height: 0; width: 0;">
+
+            </div>
+        </section>
+        <div class="bottomIcons">
+            <h2>Alarm App</h2>
+            <i class="fa-solid fa-clock active"></i>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

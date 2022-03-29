@@ -1,0 +1,219 @@
+/*start of removing default settings*/
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Smooch Sans', sans-serif;
+}
+
+:root {
+    --primary-clr: rgb(211, 18, 18);
+    --secondary-clr: #f5f5f5;
+    --stronger-red-clr: rgb(150, 2, 2);
+}
+
+/*END of removing default settings*/
+
+.mainContainer {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    background-color: #000;
+    height: 30em;
+    width: 18em;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.alarm-info {
+    position: relative;
+    flex: 40%;
+    background-color: var(--secondary-clr);
+    display: grid;
+    place-items: center;
+}
+
+.alarm-info>h1 {
+    color: var(--primary-clr);
+    letter-spacing: 1px;
+}
+
+/* IMPORTANT for toggling setting alarm section*/
+.settingAlarm {
+    display: none;
+    width: 90%;
+    margin: auto;
+}
+
+.adAlarmContent>.settingAlarm {
+    display: block;
+}
+
+.adAlarmContent .title {
+    display: none;
+}
+
+/*END*/
+
+.settingAlarm label {
+    color: var(--primary-clr);
+    font-size: 1.1em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.settingAlarm #inputsContainer {
+    position: relative;
+    height: 2.2em;
+    width: 11em;
+    margin: 15px 0;
+    border: none;
+    background: none;
+    display: grid;
+    align-items: center;
+    color: #000;
+    font-weight: bold;
+}
+
+#inputs {
+    height: 100%;
+    width: 11.6em;
+    padding: 0 10px;
+    border: none;
+    background: none;
+    border-bottom: 2px solid #000;
+}
+
+
+/* removing default caret up and down that comes with input number*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/*END*/
+
+
+#inputsContainer .fa-square-caret-down {
+    cursor: pointer;
+    color: var(--primary-clr);
+}
+
+#inputsContainer .fa-square-caret-down:nth-child(2) {
+    transform: rotate(180deg)
+}
+
+#inputsContainer .fa-square-caret-down:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 5px;
+}
+
+#inputsContainer .fa-square-caret-down:nth-child(3) {
+    transform: rotate(0deg)
+}
+
+#inputsContainer .fa-square-caret-down:nth-child(3) {
+    color: var(--primary-clr);
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+}
+
+.settingAlarm a {
+    color: var(--secondary-clr);
+    background-color: var(--primary-clr);
+    text-decoration: none;
+    display: block;
+    margin: 5px;
+    width: 70%;
+    margin: 15px auto;
+    height: 2em;
+}
+
+.settingAlarm h3 {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    font-size: 1.4em;
+    letter-spacing: 1.5px;
+}
+
+.alarms {
+    position: relative;
+    flex: 50%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.alarms.showCurrentTimeSection {
+    display: none;
+}
+
+.alarm-info .icons {
+    position: absolute;
+    bottom: 0;
+    left: 80%;
+    height: 30px;
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.icons>.fa-plus, .fa-ellipsis-vertical {
+    color: #000;
+    cursor: pointer;
+}
+
+.bottomIcons {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    flex: 20%;
+    width: 100%;
+    color: var(--secondary-clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-clr);
+}
+
+.bottomIcons>.fa-solid, h2 {
+    margin: 0 10px;
+}
+
+.bottomIcons h2 {
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-weight: lighter;
+}
+
+.actualAlarm {
+    width: 90%;
+    margin: 0px auto 7px auto;
+    height: 2em;
+    border-radius: 25px;
+    color: var(--secondary-clr);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: bold;
+}
